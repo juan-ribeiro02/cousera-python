@@ -1,5 +1,13 @@
 def menor_nome(nomes):
     if not nomes:
         return None
+    
+    menor = min(nomes, key=lambda x: len(x.strip()))
+    
+    return menor.strip().capitalize()
 
-    return min(nomes, key=str.lower)
+lista = ['maria', 'josé', 'PAULO', 'Catarina']
+
+resul = menor_nome(lista)
+
+print(resul)
