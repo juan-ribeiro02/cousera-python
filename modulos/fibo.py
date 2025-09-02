@@ -17,6 +17,16 @@ def seq_fib(n):
         resul.append(a)
     return resul
 
-if __name__ == "__main__":
-    import sys
-    fib(int(sys.argv[1]))
+import pytest
+
+@pytest.mark.parametrize("entrada", "esperado", [
+    (0, 0),
+    (1, 1),
+    (2, 1),
+    (3, 2),
+    (4, 3),
+    (5, 5)
+    ])
+
+def teste_fib(entrada, esperado):
+    assert fib(entrada) == esperado
