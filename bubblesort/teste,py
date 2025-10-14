@@ -1,0 +1,12 @@
+import ordenador
+import pytest
+
+class TestaOrdernador:
+
+    @pytest.fixture
+    def o(self):
+        return ordenador.Ordenador()
+    
+    @pytest.fixture
+    def l_quase(self):
+        
